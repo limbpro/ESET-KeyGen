@@ -56,7 +56,7 @@ jobs:
           
           if [[ ${KEY} != 0 ]]
           then
-          seq 1 $((KEY)) | xargs -I {} -P $((KEY)) python3 main.py --firefox --key --email-api ${MAIL} --skip-webdriver-menu --skip-update-check
+          seq 1 $((KEY)) | xargs -I {} -P $((KEY)) python3 main.py --chrome --key --email-api ${MAIL} --skip-webdriver-menu --skip-update-check
           echo -e "\nKey:" >> $GITHUB_STEP_SUMMARY
           cat ./*KEYS.txt >> $GITHUB_STEP_SUMMARY
           fi
